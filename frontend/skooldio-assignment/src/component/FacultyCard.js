@@ -8,7 +8,7 @@ const FacultyCard = (props) => {
     return (
         <div className="card-area p-3">
             {props.data && props.data.map((item =>
-                <div key={item.id} className="card-container col m-1">
+                <div key={item.id} className="card-container col m-1 pt-3">
                     <div className="card-header-container">
                         <div className="card-photo-container d-flex justify-content-between">
                             <div>    
@@ -22,19 +22,19 @@ const FacultyCard = (props) => {
                             <h1 className="text-danger ">❤</h1>
                         </div>
                     </div>
-
+                    <hr class="solid"></hr>
                     <div className="card-body-container col">
                         <div className="row ml-5">
-                            <div className="pr-1">รอบที่เปิด </div>
+                            <div className="pr-1 pb-3">รอบที่เปิด </div>
                             {item.roundSeats.map((seat =>
-                                <div className="pr-2 "> {seat}</div>
+                                <div className={"pr-2 " + (seat === -1 ? 'bg-secondary' : 'bg-success')}> {seat}</div>
                             ))}
                         </div>
-                        <div className="round-container d-flex justify-content-between pl-5">
+                        <div className="round-container d-flex justify-content-between pl-5 pb-3">
                             {item.score? <div>รอบที่ 4 : {item.score.scoreType}</div>:<div>null</div>}
                             <button>แก้ไขคะแนน</button>
                         </div>
-                        <div className="myscoring-container d-flex justify-content-between">
+                        <div className="myscoring-container d-flex justify-content-between pb-3">
                             <div>★</div> 
                             <div>
                                 <div>คะแนนของคุณคือ</div> 
@@ -56,8 +56,10 @@ const FacultyCard = (props) => {
                             </div>
                             
                         </div>
+                        <hr className="solid"></hr>
                         <a>ดูสัดส่วนคะแนน</a>
-                        <div>{item.likes}ที่สนใจ</div>
+                        <hr className="solid"></hr>
+                        <div className="pb-3">{item.likes}ที่สนใจ</div>
                     </div>
 
 
