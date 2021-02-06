@@ -22,7 +22,7 @@ const FacultyCard = (props) => {
                             <h1 className="text-danger ">❤</h1>
                         </div>
                     </div>
-                    <hr class="solid"></hr>
+                    <hr className="solid"></hr>
                     <div className="card-body-container col">
                         <div className="row ml-5">
                             <div className="pr-1 pb-3">รอบที่เปิด </div>
