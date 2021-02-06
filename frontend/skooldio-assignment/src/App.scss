@@ -1,0 +1,11 @@
+* {
+  font-family: Helvetica Neue, Helvetica, Thonburi, Arial, sans-serif;
+}
+.card-container {
+  border-radius: 5px;
+  border: solid 1px;
+  .card-photo{
+      border-radius: 50%;
+      width: 80px;
+  }
+}
