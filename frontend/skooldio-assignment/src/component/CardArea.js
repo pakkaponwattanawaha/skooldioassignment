@@ -9,7 +9,7 @@ const CardArea = () => {
     useEffect(() => {
         getData().then(ret => { setApiResponse(ret) })
     },[])
-    console.log(apiResponse)
+    //console.log(apiResponse)
     return (
         <div>
             <FacultyCard data={apiResponse}/>
